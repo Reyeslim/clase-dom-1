@@ -143,3 +143,42 @@ botonMostrarCaros.addEventListener("click", () => {
 btnLimpiar.addEventListener("click", () => {
   resultadoBotones.innerHTML = ""
 })
+
+// Mejora de los botones
+
+// Creamos una función para mostrar los productos.
+// Le pasamos como argumento:
+// - productos: El array de productos que vayamos a recorrer
+// - titulo: El mensaje que queremos que contenga el h3. Ejemplo: 'Todos los productos (10)'
+// Ponemos dentro la lógica
+
+// const mostrarProductos = (productos, titulo) => {
+//   const productosHTML = productos.map(crearHTMLProducto).join("")
+//   resultadoBotones.innerHTML = `
+//   <h3>${titulo} (${productos.length})</h3>
+//   <div class="grid-productos">${productosHTML}</div>
+//   `
+// }
+
+// Seleccionamos por clase el div que contiene los botones
+
+// const divControles = document.querySelector(".controles")
+
+// Aplicamos el evento a ese div. Le pasamos evento (e) como argumento
+
+// divControles.addEventListener("click", (e) => {
+//   const id = e.target.id // Aquí lo que hacemos es guardar el id del elemento objetivo del evento. Si hacemos click en el botón 'Todos', guardará el id de ese botón ('btnMostrarTodos')
+
+//   // Hacemos condicional para comparar el id del elemento en el que hemos hecho click y mostrar una cosa u otra dependiendo de ese id
+//   if (id === "btnMostrarTodos") {
+//     mostrarProductos(productos, "Todos los productos")
+//   } else if (id === "btnMostrarOfertas") {
+//     const ofertas = productos.filter((p) => p.enOferta)
+//     mostrarProductos(ofertas, "Productos en oferta")
+//   } else if (id === "btnMostrarCaros") {
+//     const premium = productos.filter((p) => p.precio > 500)
+//     mostrarProductos(premium, "Productos premium")
+//   } else if (id === "btnLimpiar") {
+//     resultadoBotones.innerHTML = ""
+//   }
+// })
